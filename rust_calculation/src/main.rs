@@ -1,3 +1,5 @@
+mod basic_syntax;
+
 fn main() {
-    println!("Hello, world!");
+    basic_syntax::variable();
 }
