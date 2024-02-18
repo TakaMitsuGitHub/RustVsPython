@@ -34,11 +34,12 @@ pub fn variable() {
     println!("c = {}", c);
 
     //  文字列
-    let mut s:&str = "abc";
+    let mut s:&str = "a";
+    println!("s = {}", s);
+    s = "abc";
     println!("s = {}", s);
 
-    s = "a";
-    println!("s = {}", s);
+    intangible_for(s.chars());
 
 }
 
@@ -48,3 +49,14 @@ pub fn integer_for(v: Vec<isize>) {
         println!("i = {}", i);
     }
 }
+
+pub fn intangible_for<T>(v: T)
+where
+T: IntoIterator,
+T::Item: std::fmt::Display,
+{
+    for i in v.into_iter() {
+        println!("i = {}", i);
+    }
+}
+
