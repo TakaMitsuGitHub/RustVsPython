@@ -2,13 +2,14 @@ use std::time::Instant;
 
 mod prime_number_calculation;
 
-const NUM:usize = 10000;
+const LIMIT:usize = 1000000;
+const NUM:usize = 10;
 fn main() {
     // 型注釈は必要ない場合、自動的に推論される
     let mut v = Vec::new();
-    for _ in 0..10 {
+    for _ in 0..NUM {
         let start = Instant::now();
-        prime_number_calculation::sieve_of_eratosthenes(NUM);
+        prime_number_calculation::sieve_of_eratosthenes(LIMIT);
         let duration = start.elapsed();
         
         println!("処理時間: {:?}", duration);
