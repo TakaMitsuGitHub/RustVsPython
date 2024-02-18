@@ -16,5 +16,35 @@ pub fn variable() {
     x = 1;
     println!("x = {}", x);
 
+    // 静的配列
+    const V:[isize; 3]= [1, 2, 3];
+    println!("V = {:?}", V);
 
+    // 動的配列
+    let mut v = Vec::<isize>::new();
+    println!("空の配列 v = {:?}", v);
+    v.push(X);
+    v.push(X);
+    println!("値が追加された配列 v = {:?}", v);
+
+    integer_for(v);
+
+    // 1文字
+    let c:char = 'c';
+    println!("c = {}", c);
+
+    //  文字列
+    let mut s:&str = "abc";
+    println!("s = {}", s);
+
+    s = "a";
+    println!("s = {}", s);
+
+}
+
+pub fn integer_for(v: Vec<isize>) {
+    // for文で値を取り出す為の変数に型指定する必要は無い（型推論）
+    for i in v {
+        println!("i = {}", i);
+    }
 }
