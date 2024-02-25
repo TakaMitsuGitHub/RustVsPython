@@ -7,3 +7,7 @@ edition = "2021"
 
 [dependencies]
 polars = "0.37.0"
+plotters = "0.3.1"
+
+# 時刻情報を扱うの利用（グラフ表示に必須ではない）
+chrono = "0.4.19"
